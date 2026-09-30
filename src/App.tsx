@@ -1,7 +1,11 @@
+import HeroSection from "./heroSection/heroSection.tsx";
+import NavBar from "./navBar/navBar.tsx";
+
 function App() {
   return (
     <>
-      <h2>Hello, World!</h2>
+      <NavBar />
+      <HeroSection />
     </>
   );
 }
