@@ -1,7 +1,7 @@
 import navBarLogo from "../assets/logo-text.png";
 const NavBar = () => {
   return (
-    <div className="grid grid-cols-3 gap-120 items-center justify-items-center container mx-auto">
+    <div className="grid grid-cols-3 gap-20 items-center justify-items-center container mx-auto">
       <div>
         <img src={navBarLogo} alt="" />
       </div>
