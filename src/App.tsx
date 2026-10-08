@@ -6,7 +6,7 @@ import { Toaster } from "react-hot-toast";
 import Footer from "./footer/footer.tsx";
 
 const TechCardFetch = async () => {
-  const response = await fetch("/public/technologies.json");
+  const response = await fetch(`${import.meta.env.BASE_URL}technologies.json`);
   const data = await response.json();
   return data;
 };
