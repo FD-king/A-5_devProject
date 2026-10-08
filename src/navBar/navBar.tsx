@@ -1,7 +1,7 @@
 import navBarLogo from "../assets/logo-text.png";
 const NavBar = () => {
   return (
-    <div className="sticky top-0 z-50 bg-white grid grid-cols-3 gap-20 items-center pt-4">
+    <div className="sticky top-0 z-50 bg-white grid grid-cols-3 gap-20 items-center py-3">
       <div>
         <img src={navBarLogo} alt="" />
       </div>
@@ -22,7 +22,7 @@ const NavBar = () => {
           Contact
         </a>
       </div>
-      <div className="flex justify-end">
+      <div className="flex justify-end items-center">
         <a className="text-[#334155] mr-5" href="">
           Sign In
         </a>
