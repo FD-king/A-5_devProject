@@ -10,5 +10,5 @@ export default defineConfig({
     tailwindcss(),
     babel({ presets: [reactCompilerPreset()] }),
   ],
-  base: "/A-5_devProject/",
+  base: process.env.GITHUB_ACTIONS ? "/A-5_devProject/" : "/",
 });
