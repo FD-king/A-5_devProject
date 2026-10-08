@@ -1,7 +1,7 @@
 import navBarLogo from "../assets/logo-text.png";
 const NavBar = () => {
   return (
-    <div className="grid grid-cols-3 gap-20 items-center justify-items-center container mx-auto">
+    <div className="sticky top-0 z-50 bg-white grid grid-cols-3 gap-20 items-center pt-4">
       <div>
         <img src={navBarLogo} alt="" />
       </div>
@@ -9,16 +9,24 @@ const NavBar = () => {
         <a className="text-[#DB2777]" href="">
           Home
         </a>
-        <a href="">Technologies</a>
-        <a href="">Projects</a>
-        <a href="">About</a>
-        <a href="">Contact</a>
+        <a className="text-[#475569]" href="">
+          Technologies
+        </a>
+        <a className="text-[#475569]" href="">
+          Projects
+        </a>
+        <a className="text-[#475569]" href="">
+          About
+        </a>
+        <a className="text-[#475569]" href="">
+          Contact
+        </a>
       </div>
-      <div>
+      <div className="flex justify-end">
         <a className="text-[#334155] mr-5" href="">
           Sign In
         </a>
-        <button className="btn btn-active px-5 bg-[#D91B7E] rounded-full">
+        <button className="btn btn-active px-5 bg-[#D91B7E] rounded-full border-0">
           Sign Up
         </button>
       </div>

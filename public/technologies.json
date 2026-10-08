@@ -22,7 +22,7 @@
   {
     "id": 3,
     "name": "Svelte",
-    "icon": "../src/assets/Vector (1).png",
+    "icon": "../src/assets/Svelte.png",
     "badge": "Fast",
     "description": "Cybernetically enhanced web apps with compile-time reactivity and zero virtual DOM overhead.",
     "category": "Frontend",
@@ -52,7 +52,7 @@
   {
     "id": 6,
     "name": "PostgreSQL",
-    "icon": "../src/assets/Vector (4).png",
+    "icon": "../src/assets/PostgresSQL.svg.png",
     "badge": "Top SQL",
     "description": "A powerful, open-source object-relational database system with proven reliability.",
     "category": "Database",

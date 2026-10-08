@@ -1,6 +1,15 @@
+import { toast } from "react-hot-toast";
 import type { Itechnology } from "../typesFolder/techCardType";
 
-const TechCard = ({ techData }: { techData: Itechnology }) => {
+const TechCard = ({
+  techData,
+  handleSaveCard,
+  isSaved,
+}: {
+  techData: Itechnology;
+  handleSaveCard: (card: Itechnology) => void;
+  isSaved: boolean;
+}) => {
   return (
     <div className="container mx-auto w-full max-w-95 rounded-[22px] border border-slate-200 bg-white p-7.5 shadow-sm">
       <div className="flex items-start justify-between">
@@ -27,23 +36,36 @@ const TechCard = ({ techData }: { techData: Itechnology }) => {
         </p>
       </div>
 
-      <div className="mt-6 flex items-center gap-8 border-t border-slate-100 pt-3">
-        <span className="rounded-md bg-slate-100 px-3 py-1.5 text-base text-slate-600">
-          {techData.category}
-        </span>
+      <div>
+        <div className="mt-6 flex items-center justify-between border-t border-slate-100 pt-3">
+          <span className="shrink-0 rounded-md bg-slate-100 px-2.5 py-1 text-sm text-slate-600">
+            {techData.category}
+          </span>
 
-        <span className="whitespace-nowrap text-base text-slate-500">
-          {techData.level}
-        </span>
+          <span className="shrink-0 whitespace-nowrap text-sm text-slate-500">
+            {techData.level}
+          </span>
 
-        <span className="flex items-center gap-1.5 text-base font-medium text-slate-700">
-          <span className="text-lg text-amber-400">★</span>
-          {techData.rating}
-        </span>
+          <span className="flex shrink-0 items-center gap-1 text-sm font-medium text-slate-700">
+            <span className="text-base text-amber-400">★</span>
+            {techData.rating}
+          </span>
+        </div>
       </div>
 
-      <button className="mt-6 w-full rounded-[10px] bg-slate-950 px-4 py-3 text-base font-medium text-white transition hover:bg-slate-800">
-        Add to Stack
+      <button
+        disabled={isSaved}
+        className={`mt-6 w-full rounded-[10px] px-4 py-3 text-base font-medium transition ${
+          isSaved
+            ? "cursor-not-allowed bg-slate-300 text-slate-600"
+            : "bg-slate-950 text-white hover:bg-slate-800"
+        }`}
+        onClick={() => {
+          handleSaveCard(techData);
+          toast.success("Successfully added to stack!");
+        }}
+      >
+        {isSaved ? "Added to Stack" : "Add to Stack"}
       </button>
     </div>
   );
