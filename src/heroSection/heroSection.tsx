@@ -1,4 +1,3 @@
-import React from "react";
 import bannerStackImage from "../assets/banner-stack.png";
 
 const HeroSection = () => {
