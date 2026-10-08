@@ -3,6 +3,7 @@ import HeroSection from "./heroSection/heroSection.tsx";
 import MainBody from "./mainBody/mainBody.tsx";
 import NavBar from "./navBar/navBar.tsx";
 import { Toaster } from "react-hot-toast";
+import Footer from "./footer/footer.tsx";
 
 const TechCardFetch = async () => {
   const response = await fetch("/public/technologies.json");
@@ -21,6 +22,7 @@ function App() {
         <Suspense fallback={<div>Loading...</div>}>
           <MainBody techDataPromise={techDataPromise} />
         </Suspense>
+        <Footer />
       </div>
     </>
   );
